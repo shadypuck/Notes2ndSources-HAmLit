@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage[letterpaper, margin=1.4in, marginparsep=0.2cm, marginparwidth=1.5in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{mathptmx}
+\usepackage{marginnote}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{hanging}
+\usepackage{xcolor}
+\usepackage{everyshi}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\MakeOuterQuote{"}
+
+\newcommand\invisiblesection[1]{\addcontentsline{toc}{subsection}{\protect#1}\sectionmark{#1}}
+
+\newcounter{source}
+\newcounter{notepage}[source]
+\newcounter{note}
+
+\EveryShipout{\stepcounter{notepage}}
+
+\newenvironment{Source}[2]{
+    \invisiblesection{#1}
+    \stepcounter{source}
+    \stepcounter{notepage}
+    \chead{#1}
+    \doublespacing
+    \begin{hangparas}{0.5in}{1}
+        #2
+    \end{hangparas}
+    \singlespacing}
+    {\newpage
+}
+
+\newcommand{\dq}[2]{
+    \stepcounter{note}
+    \marginnote{\thenote\space Direct Quote}
+    \noindent ``#1" (#2).
+    \bigskip
+
+}
+\newcommand{\dqx}[1]{
+    \stepcounter{note}
+    \marginnote{\thenote\space Direct Quote}
+    \noindent ``#1."
+    \bigskip
+
+}
+\newcommand{\para}[2]{
+    \stepcounter{note}
+    \marginnote{\thenote\space Paraphrase}
+    \noindent #1 (#2).
+    \bigskip
+
+}
+\newcommand{\parax}[1]{
+    \stepcounter{note}
+    \marginnote{\thenote\space Paraphrase}
+    \noindent #1.
+    \bigskip
+
+}
+\newcommand{\summ}[2]{
+    \stepcounter{note}
+    \marginnote{\thenote\space Summary}
+    \noindent #1 (#2).
+    \bigskip
+
+}
+\newcommand{\summx}[1]{
+    \stepcounter{note}
+    \marginnote{\thenote\space Summary}
+    \noindent #1.
+    \bigskip
+
+}
+\newcommand{\hyperform}[1]{\textcolor{blue}{\underline{#1}}}
+
+\title{Secondary Source Notes}
+\author{Steven Labalme}
+\date{\today}
+
+\begin{document}
+
+
+
+
+\reversemarginpar
+\pagenumbering{gobble}
+\maketitle
+\newpage
+
+
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\circled{\thesource}}
+\rhead{\thenotepage}
+\cfoot{Page \textbf{\thepage}\space of \textbf{\pageref{LastPage}}}
+\rfoot{Labalme}
+\renewcommand{\headrulewidth}{0pt}
+\raggedright
+
+\begin{Source}{Abramsky}{Abramsky, Sasha. “How Trump Has Normalized the Unspeakable.” \emph{The Nation}, Nation Company, 20 Sept. 2017, www.thenation.com/article/how-trump-has- normalized-the-unspeakable/. Accessed 28 May 2018.}
+    \dqx{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum}
+    \parax{Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris}
+    \summx{Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum pellentesque felis eu massa}
+    \dqx{Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula}
+    \parax{Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla. Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer}
+    \summx{Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et convallis elit erat sed nulla. Donec luctus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non, pharetra in, velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel, odio}
+\end{Source}
+
+
+\begin{Source}{Frye}{Frye, Roland Mushat. “Milton’s ‘Paradise Lost’ and the Visual Arts.” \emph{Proceedings of the American Philosophical Society}, vol. 120, no. 4, 13 Aug. 1976, pp. 233-44. \emph{JSTOR}, www.jstor.org/stable/986319. Accessed 19 May 2018.}
+    \dq{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum}{3}
+    \para{Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris}{5}
+    \summ{Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum pellentesque felis eu massa}{8}
+\end{Source}
+
+
+
+
+\end{document}

@@ -31,9 +31,9 @@
     \stepcounter{notepage}
     \chead{#1}
     \doublespacing
-    \begin{hangparas}{0.5in}{1}
-        #2
-    \end{hangparas}
+
+    \hangpara{0.5in}{1} #2
+
     \singlespacing}
     {\newpage
 }
@@ -80,6 +80,16 @@
     \bigskip
 
 }
+\newcommand{\tho}[1]{
+    \marginnote{\emph{Thought}}
+    \setlength{\leftskip}{0.5in}
+
+    #1.
+    
+    \setlength{\leftskip}{0pt}
+    \bigskip
+
+}
 \newcommand{\hyperform}[1]{\textcolor{blue}{\underline{#1}}}
 
 \title{Secondary Source Notes}
@@ -114,20 +124,135 @@
 \renewcommand{\headrulewidth}{0pt}
 \raggedright
 
-\begin{Source}{Abramsky}{Abramsky, Sasha. “How Trump Has Normalized the Unspeakable.” \emph{The Nation}, Nation Company, 20 Sept. 2017, www.thenation.com/article/how-trump-has- normalized-the-unspeakable/. Accessed 28 May 2018.}
-    \dqx{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum}
-    \parax{Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris}
-    \summx{Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum pellentesque felis eu massa}
-    \dqx{Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula}
-    \parax{Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla. Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer}
-    \summx{Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et convallis elit erat sed nulla. Donec luctus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non, pharetra in, velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel, odio}
+\begin{Source}{Oliver}{Oliver, Charles M. "Hemingway, Ernest." \emph{Critical Companion to Ernest Hemingway}, Facts On File, 2007. \emph{Bloom's Literature}, online.infobase.com/Auth/Index?aid =16029\&itemid=WE54\&articleId=14095. Accessed 30 Apr. 2019.}
+    \dqx{From maturity until his death, Ernest Hemingway lived a life of almost constant excitement}
+    \parax{Hemingway grew up in a predominantly Protestant suburb of Chicago, where the strict, conformist atmosphere made life difficult for imaginative youngsters, such as himself}
+    \parax{Hemingway's father was his doctor and his mother gave piano lessons from home (she, before marriage, had entertained the thought of a career in opera). He had five siblings --- four sisters and one brother}
+    \dqx{As a senior he played varsity football and performed the role of Richard Brinsley Sheridan in the senior play, \emph{Beau Brummel}.}
+    \summx{Tyler Hemingway, Ernest's uncle and the hero of his nephew's first story, helped get Ernest his first job as a cub reporter for \emph{The Kansas City Star}. It was at the \emph{Star} that he developed his writing style of abrupt, simple sentences (see next note, which concerns rule number 1 of the \emph{Star's} style rules). He commonly gathered news on his "short-stop run," which included the police and railway stations as well as the hospital}
+    \dqx{Rule No. 1: `Use short sentences. Use short first paragraphs. Use vigorous English. Be positive, not negative.' Hemingway referred to this style rule in his maturity as a writer, stating that it was the most important lesson he had learned in Kansas City}
+    \summx{One day, Hemingway that an unconscious man at the train station was sick with smallpox. When no one else would help him, he denounced the people standing around him and personally (and singlehandedly) took the man to the hospital}
+    \parax{Because of bad eyesight, Hemingway could not fight on the front lines, so he enlisted in the Red Cross to drive ambulances in Italy}
+    \dqx{Hemingway served with the Red Cross only 34 days. He joined his unit on June 4 and was wounded on July 8, while delivering cigarettes, chocolate, and postcards to Italian soldiers along the Piave River near Fossalta, on the Veneto Plain about 20 miles northeast of Venice. A trench mortar shell exploded a few feet from him, but an Italian soldier was between Hemingway and the explosion and took the brunt of the shell fragments. He was killed, and Hemingway was badly wounded}
+    \summx{Furthermore, he was awarded the Silver Medal of Military Valor for ensuring the safe evacuation of others wounded by the same blast before he, himself, could receive treatment. His wounds were not horrendous and he regained full bodily function. While there, he fell in love with a nurse, but she did not fall in love with him \& she broke it off, severely shocking him}
+    \summx{Upon returning from the war, he went to Windemere Cottage, the family summer home in northern Michigan and wrote "Up in Michigan." He then wrote off and on for \emph{The Toronto Daily Star} and \emph{The Toronto Star Weekly}, meeting his first wife (Hadley Richardson) on the way. They traveled to Paris where Hemingway wrote and mailed articles back to the \emph{Star}}
+    \dqx{Paris was the place to be for hopeful American writers during the 1920s, and Hemingway took advantage of the postwar atmosphere of freedom that was available to the hundreds of artists from all over the world who made their way to the French capital during those years}
+    \summx{Hemingway observed the end of the Greco-Turkish war while there \& criticized Mussolini. The Hemingways also traveled to Spain for bullfighting, the Fiesta San Fermin, and Pamplona. She and him additionally went fishing a little while later. Hemingway met his second wife (Pauline Pfeiffer), marrying her two years later, though he said in later years on multiple occations that he never stopped loving Hadley}
+    \parax{In just his first year with Pauline, the accident-prone Hemingway got an infected cut on his foot, had his son scratch his eye, leading to several days of partial blindness, and his apartment's skylight fell on his head}
+    \summx{Ernest and Pauline left for Key West \& Hemingway's second son (Patrick) was born shortly after on a trip to see Pauline's parents. Ernest's father committed suicide by revolver shortly after. Broke his arm in an automobile accident. Third son (Gregory) born. Did several safaris, went deep-sea fishing (shot himself in each leg while trying to kill a shark). Visited Pamplona \& the bullfights several more times in these years}
+    \parax{Covered the Spanish Civil War and met Martha Gellhorn (wife \#3). Pauline sensed the end of the marriage and ran off to New York with Patrick and Gregory. Ernest married Martha, but her job as a top-tier war correspondent competed with his and their short, unsuccessful marriage ended after WWII ended}
+    \dqx{The marriage with Martha was beginning to come apart, and fishing with the boys each summer and looking for submarines no doubt helped to take his mind off the marriage difficulties}
+    \dqx{On August 5, a jeep he was riding in turned over, and Hemingway came away with a concussion, headaches, and double vision. He had been in a car accident in London in May, and the jeep crash accentuated an already injured head and body\dots The headaches would continue for the rest of his life}
+    \summx{Met his fourth wife (Mary Welsh Monks). Hemingway latched onto a group that questioned prisoners. Hemingway was occationally accused of getting in the way, but no one doubted his bravery and quick thinking}
+    \dqx{On the way to the Havana airport, Ernest wrecked his car, causing himself yet another head injury and breaking four ribs}
+    \parax{Hemingway often treated Mary poorly, especially after saving her life in the operating room when she suffered an ectopic pregnancy. On a trip, Hemingway suffered an eye infection}
+    \dqx{Ernest injured his head again in an accident on the Pilar, and his headaches returned; what was even worse, however, was that in the accident pieces of metal still in his legs from the World War I wounds came loose and caused severe pain and swelling in his right leg}
+    \summx{Ernest's family frayed as his mom (who he did not get along with) passed. Soon after, Pauline died \& Ernest blamed his son, Gregory, who never saw his father again}
+    \summx{Hemingway's first plane crash resulted in two broken ribs and shock for Mary and a shoulder injury for Ernest. A day later, their next plane burst into flame on takeoff, resulting in a more serious injury for Ernest when he had to "butt with his head and already injured shoulder through a stuck door on his side of the plane." A week after the plane crashes, he "fell into a brush fire that he was helping to put out and sustained second-degree burns over part of his upper body"}
+    \summx{Hemingway gained immense popularity after the Nobel, and this compounded with ill health to slow his writing and spirits}
+    \parax{Hemingway's depression worsened, and he showed signs of erratic behavior (he wrote to Mary that he was having a nervous breakdown). He was treated at the Mayo Clinic for many symptoms, including paranoia (he believed he was being followed by the FBI --- a claim thought to be paranoid, but was proved true a few years after his death). He attempted suicide twice before he succeeded on his third try, using a double-barreled shot gun with which he had hunted for many years}
 \end{Source}
 
 
-\begin{Source}{Frye}{Frye, Roland Mushat. “Milton’s ‘Paradise Lost’ and the Visual Arts.” \emph{Proceedings of the American Philosophical Society}, vol. 120, no. 4, 13 Aug. 1976, pp. 233-44. \emph{JSTOR}, www.jstor.org/stable/986319. Accessed 19 May 2018.}
-    \dq{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum}{3}
-    \para{Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris}{5}
-    \summ{Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum pellentesque felis eu massa}{8}
+\begin{Source}{Frey}{Frey, Rebecca J., and Jennifer E. Van Pelt. "Post-Traumatic Stress Disorder (PTSD)." \emph{The Gale Encyclopedia of Mental Health}, edited by Brigham Nairns, 4th ed., vol. 3, Gale, 2019, pp. 1274-82. \emph{Health and Wellness Resource Center}, link.galegroup.com/apps/doc/CX2491200390/HWRC?u=pl7321r\&sid= HWRC\&xid=f3a88668. Accessed 2 May 2019.}
+    \dq{Post-traumatic stress disorder (PTSD) is a complex condition that may occur after individuals experience or witness a traumatic or stressful event, learn that a close family member or friend experienced one or died violently, or are repeatedly exposed to aversive details of traumatic events (e.g., a first responder)}{1274}
+    \tho{It is important to note that PTSD developing is not a sure thing --- people exposed to the same thing may or may not both develop it}
+    \para{First defined as a distinct disorder in 1980 [well after Hemingway wrote]}{1274}
+    \dq{On average, 30\% of soldiers who have been in a war zone develop PTSD}{1275}
+    \para{After witnessing a traumatic event or having a traumatic experience, it is normal to have difficulty sleeping, be emotionally unbalanced, and/or have anxiety for several weeks to months. However, if such feelings persit longer, it is likely PTSD}{1275}
+    \dq{Individuals with PTSD\dots go numb emotionally and lose interest in activities they used to enjoy\dots In some cases they may feel disconnected from the real world or have moments in which their own bodies seem unreal; these symptoms are indications of dissociation, a process in which the mind splits off certain memories or thoughts from conscious awareness. Individuals with PTSD may use alcohol or drugs to escape the flashbacks and other symptoms of the disorder and are thus more likely to have substance use disorders and other mental health issues}{1275-76}
+    \summ{Some key factors that increase the likelihood of developing PTSD are proximity to and the intensity of the traumatic experience (someone in active combat is more likely to get PTSD than someone who watched a newsreel). Furthermore, injury during the traumatic event can heighten stress levels [as well as functioning as a constant reminder]. Lastly, the availability of social support --- people with more and more caring friends are at less risk of developing PTSD}{1276}
+    \dq{PTSD also appears to be more common in seniors than in younger people\dots Of those seniors who are military veterans, there is an increasing number who are isolated and/or in poor health as a result of PTSD}{1276}
+    \dq{Studies conducted between 2004 and 2006 with veteran participants from the wars in Iraq and in Afghanistan found a strong correlation between duration of combat exposure and PTSD}{1276}
+    \tho{Hemingway was in or near combat for many years}
+    \dq{Researchers have identified the following resilience factors, which seem to decrease the likelihood that traumatic exposure will lead to PTSD [consecutive items may not be consecutively quoted]}{1277}
+    \begin{itemize}
+        \item actively seeking support from friends, family , or others following a traumatic incident
+        \item maintaining a positive view of personal actions during the course of or in response to the traumatic incident
+        \item not becoming paralyzed with terror; being able to respond and react effictively despite fear
+    \end{itemize}
+    \tho{Research Hemingway's reflections on his time at war --- did he do these things listed above? Other characters certainly did not, i.e. Jake Barnes}
+    \dq{Symptoms of PTSD vary depending on the individual and the nature of the traumatic event and may include the following:}{1277-78}
+    \begin{itemize}
+        \item negative thoughts and mood, such as inability to remember important aspects of the traumatic event; persistent negative beliefs about oneself, others, or the world; distorted sense of self-blame and negative emotional state; markedly diminished interest in significant activities; feelings of detachment from others; and inability to experience positive emotions
+        \item hyperarousal and hypervigilance, including irritable outbursts with little provocation, reckless behavior, exaggerated startle response, and concentration and sleep problems
+    \end{itemize}
+    \summ{There can be delayed onset of symptoms}{1278}
+    \dq{According to the DSM-5, the following criteria must be present for a diagnosis of PTSD in adults, adolescents, and children older than six [consecutive items may not be consecutively quoted]}{American Psychiatric Association [APA] qtd. in Frey 1279}
+    \begin{itemize}
+        \item had direct exposure
+        \item excessively negative thoughts and assumptions about oneself or of the world
+        \item persistent negative emotional state
+        \item irritability or aggression
+        \item risky or destructive behavior
+        \item hypervigilance
+        \item difficulty concentrating
+        \item sleeping disturbances
+    \end{itemize}
+    \dq{The above symptoms must be present for more than one month and must create distress or functional impairment, such as at work or in social situations. And symptoms must not be caused by medications, substance use, or other illness}{APA qtd. in Frey 1279}
+    \tho{I will need to rule out these as possibilities, esp. in Barnes \& other expatriates' actions}
+    \summ{Mostly just covers treatment, which is not relevent to this report}{1280-82}
+    \dq{Factors that improve a patient’s chances for full recovery include prompt treatment, early and ongoing support from family and friends, a high level of functioning before the frightening event, and an absence of alcohol or substance use}{1281}
+    \dq{Individuals with PTSD are at a much higher risk of committing suicide}{1281}
+\end{Source}
+
+\begin{Source}{McCarthy}{McCarthy, Raymond G. "Alcoholism." \emph{The American Journal of Nursing}, vol. 59, no. 2, 1959, pp. 203-05. \emph{JSTOR}, doi:10.2307/3417696. Accessed 5 May 2019.}
+    \dq{Mr. McCarthy is associate professor
+    of health education at Yale University
+    and associate director of the Yale Sum-
+    mer School of Alcohol Studies. He is the
+    author of three books concerned with
+    this problem}{204}
+    \para{Only about 7\% of alcohol users develop alcoholism}{203}
+    \para{The only generalization of all alcoholics seems to be that they (1) suffer from a severe discomfort originating from a psychological and/or physiological cause and use alcohol to temporarily relieve this pain. Once they identify alcohol as a pathway to relief, they (2) increasingly use it until all personal control is lost}{203-04}
+    \dq{[Alcohol] provides the ordinary drinker with a kind of relaxation, a mild sedative effect\dots it may be said that for the ordinary drinker, small amounts of
+    alcohol furnish an increase in his
+    satisfaction with reality\dots the
+    contact with reality is not lost nor
+    is the loss sought}{204}
+    \para{The ordinary drinker can abstain if told to do so without great difficulty}{204}
+    \dq{The alcoholic uses alcohol to achieve a change in reality, to make of reality something that it is not, something he can manipulate, control, adjust in terms of his fantasies. The alcoholic's drinking is always associated with some involvement such as disorganization of family life, physical complaints, or loss of job}{204}
+    \summ{There is no such person as an "alcoholic;" rather, there are millions with personality imbalances who use alcohol as a defense against reality/those who would try to stop them. Reasons for becoming an alcoholic are not others' opinions but inner trauma --- this combined with a "wave of rising emotional tension and impulsiveness" cause "intelligence, logical argument, [and] common sense to falter"}{204}
+    \para{After becoming an alcoholic once, it is impossible to control drinking ever again}{204}
+    \para{In treatment, there must not only be abstinance but an emotional change/resolution of emotional conflict}{204}
+    \summ{Author arguing for further research, discussing treatment options and gaps in medical knowledge (author's purpose in writing this article; not releveant to me)}{204-05}
+    \dq{Alcoholism is a mixed medical and social problem\dots it is an interrelated physical and emotional disability\dots the medical treatment of the body alone is not sufficient to bring about recovery}{205}
+\end{Source}
+
+\begin{Source}{Huppenbauer}{Huppenbauer, Sandra L. "PTSD: A Portrait of the Problem." \emph{The American Journal of Nursing}, vol. 82, no. 11, 1982, pp. 1699-703. \emph{JSTOR}, doi:10.2307/ 3470190. Accessed 5 May 2019.}
+    \dq{SANDRA L. HUPPENBAUER, RN, MSN, is psychiatric nurse specialist of the day treatment center at the Veterans Administration Medical Center, Allen Park, Mich. Since 1978 she has worked with Vietnam veterans, both in individual and in group psychotherapy}{1699}
+    \summ{Discussion of Vietnam factors contributing to PTSD [not relevant to me]}{1699-1700}
+    \dq{\textbf{Anger.} In a combat situation anger is a normal and expected response to a dangerous situation over which the individual has little control. The man who witnesses the death of friends and who cannot retaliate because of the elusive nature of the enemy (as well as his orders to remain in a defensive rather than offensive position) is susceptible to rage---a rage that sometimes led to publicized atrocities}{1700}
+    \para{Anger that persists for many years after the war may have roots in suppressed emotional conflict such as survivor's guilt and low self-esteem. Furthermore, anger may be a way of maintaining pride because a macho fa\c{c}ade can slow the person's processing of the war on an emotional level}{1700}
+    \para{Generally, this anger comes out in random acts of violence against family members or in suicide attempts. However, some describe it as a pervasive rage which must constantly be monitored. Still others swallow their anger and sink into depression}{1700}
+    \summ{\textbf{Guilt.} Roots in comission, omission, and association}{1700-02}
+    \begin{itemize}
+        \item The soldier \emph{committed} acts of violence that may have conflicted with personal morals.
+        \item He may feel guilty for \emph{not} rejecting unethical orders, following a moral compass, etc.
+        \item He may feel \emph{associated} with a war personally and publically viewed as immoral, may have survivor's guilt, etc.
+    \end{itemize}
+    \dq{\textbf{Psychic numbing.} The veteran characteristically reports that he has turned off all feelings, that he feels nothing, or that he feels dead inside. Numbing was an adaptive mechanism in the combat situation, for by emotionally isolating himself, he was less susceptible to feelings associated with loss. He quickly learned to avoid emotional attachments and to hold back feelings of caring and trust}{1702}
+    \para{This can contribute to "marital, family, peer, and employment" difficulties}{1702}
+    \dq{Periodically, some veterans try to assure themselves that they are still capable of feeling by engaging in such thrill-seeking behavior as shooting guns, driving at dangerously high speeds, and putting themselves in life-threatening situations}{1702}
+    \dq{Still others report that everything is emotionally anticlimactic after their highly charged combat experiences; they say that death holds little fear and life no joy}{1702}
+    \para{Can lead to distrustful or outright paranoid outlooks on life [just like late Hemingway!]}{1702}
+    \summ{Covers theraputic intervention [not relevant to me]}{1702-03}
+\end{Source}
+
+\begin{Source}{"Fight/Flight Reaction"}{"Fight/Flight Reaction." \emph{The Gale Encyclopedia of Psychology}, edited by Jacqueline L. Longe, 3rd ed., vol. 1, Gale, 2016, pp. 419-22. \emph{Health and Wellness Resource Center}, link.galegroup.com/apps/doc/CX3631000290/HWRC?u= pl7321r\&sid=HWRC\&xid=4b896707. Accessed 5 May 2019.}
+    \dq{The fight/flight reaction, also called the fight-or-flight response, is the body’s emergency response to danger. It is triggered by fear and prepares the body to defend itself or avoid the danger---quick action or quick escape. The fight/flight reaction is both a physiological and an emotional adaptation for the survival of humans and other animals}{419}
+    \para{Once the senses perceive danger, a number of physiological changes occur to prepare the body to lift, strike, or run with abnormal intensity}{419}
+    \summ{This response is under the control of the sympathetic nervous system, one of the two branches outside of conscious control because conscious thought would slow reaction time}{419-20}
+    \para{If the fight/flight reaction is not necessary, the freeze response is initiated. This shuts body systems down (stage fright, for example)}{420}
+    \summ{In the short term, the fight/flight reaction has no adverse effects, but the constant stresses of modern life (exams, work, marital issues, etc.) can cause the fight/flight response to be almost constantly activated, leading to nervous system damage and hyperarousal symptoms, e.g. insomnia, irritability, anxiety, jumpiness, and even panic attacks}{420}
+    \dq{Post-traumatic stress disorder (PTSD) is a condition in which the fight/flight reaction has been altered or damaged, so that it is activated when there is no danger}{420}
+    \dq{Hyperactivation of the fight/flight reaction can cause or worsen health problems and contribute to the following [consecutive items may not be consecutively quoted]}{421}
+    \begin{itemize}
+        \item nervousness or worry
+        \item irritability and anger
+        \item mental health problems, including depression and anxiety disordersincreased use of caffeine, alcohol, tobacco, or drugs
+        \item headaches
+    \end{itemize}
 \end{Source}
 
 
